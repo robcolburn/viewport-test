@@ -23,7 +23,6 @@
       
       .chunk {
         width: 1280px;
-        height: 200px;
         margin: 0 auto;
       }
       
@@ -51,7 +50,14 @@
     </style>
   </head>
   <body>
-    <h1>Device Width Only</h1>
+
+
+<div class="chunk">
+    <h1>Specific 1280 Width w/ Content chunks</h1>
+</div>
+
+<div class="chunk">
+
 
 <pre><code class="language-markdown">&lt;meta name="viewport" content="width=device-width"&gt;</code></pre>
 
@@ -67,10 +73,9 @@
     background: green;
   }
 }</code></pre>
-
-<div class="chunk">Content</div>
-<div class="chunk">Content</div>
-<div class="chunk">Content</div>
+  
+</div>
+<div class="chunk">Footer</div>
 
 <nav>
     <a href="index.html">No Viewport Tag</a>
