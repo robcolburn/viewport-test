@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <title>Fixed Width 1280</title>
+    <meta name="viewport" content="width=1280">
+    <meta charset="utf-8">
+    <style>
+      body {
+        background: red;
+      }
+
+      @media (min-width: 1280px) {
+        body {
+          background: green;
+        }
+      }
+
+      pre {
+        background: #cde;
+        padding: .5em;
+
+        overflow: auto;
+      }
+      
+      a {
+        color: #cde;
+        display: block;
+      }
+
+      a:hover,
+      a:target,
+      a:active {
+        color: #204467;
+      }
+
+
+      @-ms-viewport {
+        zoom: 1;
+      }
+      @-o-viewport {
+        zoom: 1;
+      }
+      @viewport {
+        zoom: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Device Width Only</h1>
+    <pre><code class="language-markdown">&lt;meta name="viewport" content="width=device-width"&gt;</code></pre>
+    <pre><code class="language-css">@viewport {
+  width: 1280;
+}</code></pre>
+    <pre><code class="language-css">body {
+  background: red;
+}
+
+@media (min-width: 1280px) {
+  body {
+    background: green;
+  }
+}</code></pre>
+  <pre id="width"></pre>
+  <nav>
+    <a href="index.html">No Viewport Tag</a>
+    <a href="is.html">Initial Scale Only</a>
+    <a href="width-is.html">Device Width plus Initial Scale</a>
+    <a href="width.html">Device Width Only</a>
+  </nav>
+  <script>
+    var width = document.getElementById('width');
+    width.textContent = window.innerWidth;
+
+    window.onload = function() {
+      writeWidth();
+    }
+    window.onresize = function() {
+      writeWidth();
+    }
+
+    function writeWidth() {
+      width.textContent = window.innerWidth;
+    }
+  </script>
+  </body>
+</html>
