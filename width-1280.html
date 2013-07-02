@@ -21,6 +21,12 @@
         overflow: auto;
       }
       
+      .chunk {
+        width: 1280px;
+        height: 200px;
+        margin: 0 auto;
+      }
+      
       a {
         color: #cde;
         display: block;
@@ -46,8 +52,10 @@
   </head>
   <body>
     <h1>Device Width Only</h1>
-    <pre><code class="language-markdown">&lt;meta name="viewport" content="width=device-width"&gt;</code></pre>
-    <pre><code class="language-css">@viewport {
+
+<pre><code class="language-markdown">&lt;meta name="viewport" content="width=device-width"&gt;</code></pre>
+
+<pre><code class="language-css">@viewport {
   width: 1280;
 }</code></pre>
     <pre><code class="language-css">body {
@@ -59,8 +67,12 @@
     background: green;
   }
 }</code></pre>
-  <pre id="width"></pre>
-  <nav>
+
+<div class="chunk">Content</div>
+<div class="chunk">Content</div>
+<div class="chunk">Content</div>
+
+<nav>
     <a href="index.html">No Viewport Tag</a>
     <a href="is.html">Initial Scale Only</a>
     <a href="width-is.html">Device Width plus Initial Scale</a>
